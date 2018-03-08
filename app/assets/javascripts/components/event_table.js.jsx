@@ -5,6 +5,7 @@ class EventTable extends React.Component {
             events.push(<Event event={event}
                                key={'event' + event.id}/>);
         })
+        
         return(
                 <table className = "table table-stripped">
                     <thead>
