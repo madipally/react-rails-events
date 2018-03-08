@@ -1,14 +1,10 @@
 class EventApplication extends React.Component {
     constructor(props,context){
 	  super(props,context);
-	  
-	  this.state = {
-	     events: []
-	  }
 	  this.handleSearch = this.handleSearch.bind(this);
 	  this.handleAdd = this.handleAdd.bind(this);
     }  
-    componentDidMount() {
+    /*componentDidMount() {
         this.getDataFromApi();
     }
     getDataFromApi() {
@@ -22,7 +18,7 @@ class EventApplication extends React.Component {
                 alert('Cannot get data from API: ', error);
             }
         });
-    }
+    }*/
     handleSearch(events){
         this.setState({ events: events })
     }
@@ -49,7 +45,7 @@ class EventApplication extends React.Component {
                   </div>
                   <div className="row">
                     <div className="col-md-12">
-                        <EventTable events={this.state.events}/>
+                        <AllEvents/>
                     </div>
                  </div>
                </div>
